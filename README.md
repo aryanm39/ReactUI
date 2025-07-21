@@ -1,39 +1,75 @@
 # FSD-2
-Here's the extracted text from the image:
 
-**Step 1: Create a React Project**
-1. Open your terminal.
-2. Run the following command to create a React project named "my-app":
+# Step-by-Step Guide to Start a React Application in Visual Studio Code
+
+### 3. (Optional but Recommended) VS Code Extensions
+- ES7+ React/Redux/React-Native Snippets
+- Prettier (Code formatter)
+- ESLint
+
+#### ✅ Option A: Using Vite (Fast and Modern)
 ```bash
-npx create-react-app my-app
+npm create vite@latest my-react-app -- --template react
+cd my-react-app
+npm install
 ```
 
-3. This will set up a basic React app with all necessary dependencies. After installation, navigate into the project folder:
+#### ✅ Option B: Using Create React App (CRA)
 ```bash
-cd my-app
+npx create-react-app my-react-app
+cd my-react-app
 ```
 
-**Step 3: Open the Project in Visual Studio Code**
-1. Open **Visual Studio Code**.
-2. Click on **File - Open Folder...** and navigate to the "my-app" folder.
-3. Once opened, you'll see the full file structure, including files like `App.js` and `index.js`, which are central to your React application.
+### Step 4: Start the Development Server
+Run the app using:
+- `npm run dev` # for Vite
+- `npm start` # for CRA
 
-**Step 4: Run Your React Application**
-1. In VS Code's integrated terminal, ensure you are in the project directory (`my-app`) and run:
-```bash
-npm start
+Then open your browser and visit:
+- http://localhost:5173 # Vite default port
+- http://localhost:3000 # CRA default port
+
+### Step 5: Explore the Project Structure
+Your folder will look like this (Vite version):
+```
+my-react-app/
+├── node_modules/
+├── public/
+├── src/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── ...
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
-2. This will start the development server, and your React app will open automatically in the default web browser at `http://localhost:3000`.
+**Key files:**
+- **App.jsx**: Main component
+- **main.jsx**: Entry point that renders `<App />`
+- **package.json**: Lists dependencies and scripts
 
-You should see the default "Welcome to React" page if everything is set up correctly!
+### Step 6: Edit Your First React Component
+Open `src/App.jsx` and replace the content:
 
-**Step 5: Customize VS Code for React Development (Optional)**
-For an enhanced development experience, consider adding these VS Code extensions:
-• **ES7+ React/Redux/React-Native snippets**: For quickly adding React snippets.
-• **Prettier - Code formatter**: Helps keep your code clean and consistent.
-• **JavaScript (ES6) code snippets**: Adds additional useful snippets.
+```jsx
+function App() {
+  return (
+    <div>
+      <h1>Hello React!</h1>
+      <p>Welcome to your first app.</p>
+    </div>
+  );
+}
 
-**Summary and Troubleshooting**
-• **Installation Issues**: Ensure Node and npm are correctly installed.
-• **Error Messages**: If `npm start` throws errors, try deleting the `node_modules` folder and running `npm install` again.
+export default App;
+```
+
+Save the file and your browser will auto-refresh to show changes!
+
+| `npm run dev` | Start development server (Vite)
+| `npm start` | Start development server (CRA) 
+| `npm run build` | Build app for production 
+| `npm install <pkg>` | Install new packages 
