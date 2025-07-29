@@ -2,7 +2,7 @@ function Footer()
 {
     return(
     <>
-        <h1 style = {{textAlign : 'center', position : 'bottom'}}>Footer</h1>
+        <h1 style = {{textAlign : 'center'}}>Footer</h1>
     </>)
 }
 
