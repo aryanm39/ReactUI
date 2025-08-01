@@ -11,27 +11,27 @@ function App() {
   return (
     <>
     {/*Q1*/}
-    <div style={{display : 'flex', float : 'left', marginRight : '40px'}}>
+    {/* <div style={{display : 'flex', float : 'left', marginRight : '40px'}}>
     <img src="https://static.vecteezy.com/system/resources/thumbnails/003/715/527/small/picture-profile-icon-male-icon-human-or-people-sign-and-symbol-vector.jpg" alt="profile"/>
     </div>
     <div>
       <h1 style={{margin : '40px'}}>
-        Name : AAAA BBBB CCCC
+        Name : abc xyz qwas
       </h1>
       <h3>
-        this is a short bio
+        short bio
       </h3>
-    </div>
+    </div> */}
 
     {/*Q2*/}
-    {/* <h3>List Of Movies</h3>
+    {/* <h1><h3>List Of Movies</h3>
     <ul>
       <li>Movie 1</li>
       <li>Movie 2</li>
       <li>Movie 3</li>
       <li>Movie 4</li>
       <li>Movie 5</li>
-    </ul> */}
+    </ul></h1> */}
 
     {/*Q3*/}
     {/* <div>
@@ -46,8 +46,8 @@ function App() {
     <Card title = "Card 1" msg = "this is description 1"/>
     <Card title = "Card 2" msg = "this is description 2"/>
     <Card title = "Card 3" msg = "this is description 3"/>
-    <Footer/> */}
-    
+    <Footer/>
+     */}
     </>
   )
 }
