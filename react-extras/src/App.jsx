@@ -1,35 +1,52 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+// import reactLogo from './assets/react.svg'
+// import viteLogo from '/vite.svg'
 import './App.css'
-
 function App() {
-  const [count, setCount] = useState(0)
+  const [number, setNumber] = useState('');
+  const [sumOfDigits, setSumOfDigits] = useState(0);
+
+  const calculateSum = (num) => { //(number)
+    if (!num) {
+      setSumOfDigits(0);
+      return;
+    }
+    
+    const numString = String(num); //number
+    let sum = 0;
+    for (let digit of numString) {
+      sum = sum + Number(digit); //numString()
+    }
+    setSumOfDigits(sum);
+  };
+
+  const handleChange = (e) => {
+    const value = e.target.value;
+    setNumber(value);
+    calculateSum(value);
+  };
 
   return (
-    <>
+    <div>
+      <h1>Sum of Digits</h1>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        <label>Enter a Number:</label>
+        <input
+          type="number"
+          id="numInput"
+          value={number}
+          onChange={handleChange}
+          placeholder="Enter a number e.g. 91234"
+        />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+      {number && (
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          The sum of digits of <span>{number}</span> is: 
+          <span>{sumOfDigits}</span>
         </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+      )}
+    </div>
+  );
 }
 
 export default App
