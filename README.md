@@ -48,8 +48,3 @@ npm install
 **Name:** `react-extras`
 - **Covers:** Extra questions given for problem solving
 
----
-
-```bash
-pip install mysql-connector-python
-```
