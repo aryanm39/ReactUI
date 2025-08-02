@@ -44,6 +44,10 @@ npm install
 **Name:** `redux-toolkit`
 - **Covers:** Notes with createSlice, RTK Query, migration comparison
 
+### App 8: Extra Questions (total 5)
+**Name:** `react-extras`
+- **Covers:** Extra questions given for problem solving
+
 ---
 
 ```bash
