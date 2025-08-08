@@ -46,6 +46,4 @@ npm install
 
 ### App 8: 5 Extra Questions
 **Name:** `react-extras`
-- **Covers:** Extra questions given for problem solving
-
-//Q2,Q3,Q4 already run 
+- **Covers:** Extra questions given for problem solving 
