@@ -48,3 +48,4 @@ npm install
 **Name:** `react-extras`
 - **Covers:** Extra questions given for problem solving
 
+//Q2,Q3,Q4 already run 
