@@ -22,7 +22,7 @@ const App = () => {
 
       <main className="main">
         <h2>Current Theme:</h2>
-        <p>{theme === "dark" ? "Dark 🌙" : "Light ☀️"}</p>
+        <p>{theme === "dark" ? "Dark" : "Light"}</p>
       </main>
     </div>
   );

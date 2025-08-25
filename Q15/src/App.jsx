@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>String Operations App</h1>
+      <h1>String Operations</h1>
 
       <input
         type="text"
