@@ -1,61 +1,43 @@
-import React, { useReducer, useState } from "react";
+import { useReducer, useState } from 'react';
 import './App.css'
 
-// Reducer function
-function todoReducer(state, action) {
-  switch (action.type) {
-    case "ADD_TODO":
-      return [...state, { id: Date.now(), text: action.payload }];
-    case "DELETE_TODO":
-      return state.filter((todo) => todo.id !== action.payload);
-    default:
-      return state;
+function App() {
+
+  const [task, setTask] = useState("")
+
+  function reducer(state, action)
+  {
+    switch (action.type) {
+      case "add":
+        return {toDos : [...state.toDos, action.newTask]}
+      case "del":
+        return {toDos : state.toDos.filter(item => item !== action.taskToRemove)}
+      default:
+        return state;
+    }
   }
-}
 
-export default function TodoApp() {
-  const [todos, dispatch] = useReducer(todoReducer, []);
-  const [input, setInput] = useState("");
+  const [state, dispatch] = useReducer(reducer, {toDos : []})
 
-  const handleAdd = () => {
-    if (input.trim() === "") return;
-    dispatch({ type: "ADD_TODO", payload: input });
-    setInput(""); // clear input
-  };
 
   return (
-    <div className="app">
-      <div className="todo-container">
-        <h1>To-Do List</h1>
-
-        {/* Input + button */}
-        <div className="input-group">
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            placeholder="Enter a task"
-          />
-          <button onClick={handleAdd}>Add</button>
-        </div>
-
-        {/* Todo list */}
-        <ul>
-          {todos.map((todo) => (
-            <li key={todo.id}>
-              <span>{todo.text}</span>
-              <button
-                className="delete-btn"
-                onClick={() =>
-                  dispatch({ type: "DELETE_TODO", payload: todo.id })
-                }
-              >
-                Delete
-              </button>
-            </li>
-          ))}
+    <>
+        <h2>To Do</h2>
+        <input type='text' placeholder='Enter The Task' required style={{height : ""}} value={task} onChange={(e) => setTask(e.target.value)}/>
+        <button style={{backgroundColor : "green", color : 'white'}} onClick={()=> {
+                    dispatch({type : "add", newTask : task})
+                    setTask("")
+                    }}>Add</button>
+        
+        <ul type = 'None'>
+          {state.toDos.map((t) => <li style={{fontSize : '18px'}} key={t}>{t}<button onClick={()=> {
+                    dispatch({type : "del", taskToRemove : t})
+                    }} 
+          style={{marginLeft : "30px", backgroundColor : 'red'}}>Del</button></li>)}
         </ul>
-      </div>
-    </div>
-  );
+
+    </>
+  )
 }
+
+export default App
