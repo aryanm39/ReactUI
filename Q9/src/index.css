@@ -66,3 +66,46 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Themes */
+body.light {
+  background: #f9f9f9;
+  color: #000;
+}
+body.dark {
+  background: #121212;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid gray;
+}
+
+/* Button */
+.toggle {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background: inherit;
+  color: inherit;
+}
+
+/* Main Section */
+.main {
+  min-height: 100vh;
+  padding: 2rem;
+}
+

@@ -1,17 +1,5 @@
-```bash
-npm create vite@latest
-cd my-react-app
-npm install
-```
-### ------------------------------------
 import "./App.css";
 min-height: 100vh;
-
-[Q1-Q5] -> Assignment1
-[Q6] -> Assignment2
-[Q7-Q11] -> Assignment5
-[Q12-Q15] -> Assignment2
-### ------------------------------------
 
 ### App 2: React Hooks Showcase (Questions 5-9)
 **Name:** `hooks-collection`

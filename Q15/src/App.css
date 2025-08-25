@@ -42,20 +42,42 @@
 }
 
 
-
-.form-container {
-  max-width: 400px;
-  margin: 50px auto;
+.App {
   text-align: center;
+  margin-top: 40px;
   font-family: Arial, sans-serif;
 }
 
-input, button {
-  margin: 10px 5px;
+/* Input box */
+input {
   padding: 8px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 220px;
   font-size: 14px;
 }
 
-button {
-  cursor: pointer;
+/* Results section */
+.result {
+  margin-top: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.result h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.result ul {
+  list-style: disc inside;
+  padding: 0;
+  margin: 0;
+}
+
+.result li {
+  margin: 6px 0;
+  font-size: 15px;
+  color: #444;
 }
