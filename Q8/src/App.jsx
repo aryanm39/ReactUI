@@ -10,7 +10,7 @@ function App() {
 
   return (
     <>
-      <h2>Login Form</h2>
+      <h2>Login Form</h2><br />
       <form onSubmit={(e) => {
         e.preventDefault()
         if(!isValidEmail){
@@ -31,7 +31,7 @@ function App() {
           setEmail(e.target.value)
           setRes("")
         }} 
-        required/> <br /><br />
+        required/>
         
         <input 
         type='password' 
@@ -41,9 +41,9 @@ function App() {
           setPass(e.target.value)
           setRes("")
         }} 
-        required/><br /><br />
+        required/><br />
 
-        <input type='submit' value={"login"}/><br /><br />
+        <input type='submit' value={"login"}/>
       </form>
       <h4>{res}</h4>
     </>

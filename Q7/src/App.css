@@ -3,6 +3,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  min-height: 100vh;
 }
 
 .logo {
@@ -39,4 +40,67 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+/* App.css */
+
+#root {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+input[type="text"] {
+  padding: 0.5rem;
+  width: 65%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 4px;
+  background: #646cff;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #4a50d1;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+li {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+li button {
+  background: #e74c3c;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+li button:hover {
+  background: #c0392b;
 }

@@ -24,16 +24,24 @@ function App() {
     <>
         <h2>To Do</h2>
         <input type='text' placeholder='Enter The Task' required style={{height : ""}} value={task} onChange={(e) => setTask(e.target.value)}/>
-        <button style={{backgroundColor : "green", color : 'white'}} onClick={()=> {
+        {/* <button  onClick={()=> {
                     dispatch({type : "add", newTask : task})
                     setTask("")
                     }}>Add</button>
-        
+
+         */}
+          <button  
+            onClick={() => {
+              if (task.trim() !== "") {  //Only add if not empty
+                dispatch({ type: "add", newTask: task.trim() })
+                setTask("")
+              }
+          }}>Add</button>
+
         <ul type = 'None'>
           {state.toDos.map((t) => <li style={{fontSize : '18px'}} key={t}>{t}<button onClick={()=> {
                     dispatch({type : "del", taskToRemove : t})
-                    }} 
-          style={{marginLeft : "30px", backgroundColor : 'red'}}>Del</button></li>)}
+                    }} >Del</button></li>)}
         </ul>
 
     </>
