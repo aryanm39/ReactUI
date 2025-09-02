@@ -1,18 +1,27 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import UserList from './UserList';
-import UserDetail from './UserDetail';
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+
 
 function App() {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await fetch('https://dummyjson.com/users');
+      const json = await response.json();
+      setData(json.users);
+    };
+
+    fetchData();
+  }, []);
+
+ 
   return (
-    <div>
-      <h1>User Directory</h1>
-      <Routes>
-        <Route path="/" element={<UserList />} />
-        <Route path="/user/:id" element={<UserDetail />} />
-      </Routes>
-    </div>
+    <>
+      <p>
+        {data.map((d, index) => (
+          <h3 key={index}>{d.firstName + " " + d.lastName+ " " + d.age+ " " + d.gender}<br /></h3>
+        ))}
+      </p>
+    </>
   );
 }
 
