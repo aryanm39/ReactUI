@@ -1,0 +1,18 @@
+ul
+{
+  display: flex;
+  float: left;
+  background-color: rgb(142, 142, 142);
+  width: 100vw;
+}
+
+li
+{
+  margin: 20px;
+  font-size: x-large;
+}
+
+li:hover
+{
+  color: rgb(45, 43, 43);
+}
