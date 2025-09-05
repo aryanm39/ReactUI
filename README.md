@@ -12,3 +12,11 @@ min-height: 100vh; -->
 
 <!-- Q20 -->
 Traditional Redux App
+
+npm install redux react-redux
+src
+|- redux
+    |-
+        counterActions.jsx
+        counterReducer.jsx
+        store.jsx
