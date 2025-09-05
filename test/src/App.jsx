@@ -4,7 +4,8 @@ import { Increment,Decrement } from "./redux/counterActions.jsx";
 
 function App () 
 {
-  const count = useSelector((state)=>state(count));
+  const count = useSelector((state) => state.counter);
+
   
   const dispatch = useDispatch();
 
