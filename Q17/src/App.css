@@ -2,7 +2,7 @@ ul
 {
   display: flex;
   float: left;
-  background-color: rgb(142, 142, 142);
+  background-color: rgb(40, 20, 156);
   width: 100vw;
 }
 
@@ -14,5 +14,6 @@ li
 
 li:hover
 {
-  color: rgb(45, 43, 43);
+  color: rgb(172, 162, 162);
 }
+
