@@ -8,7 +8,7 @@ export const Decrement = () => ({
 });
 
 // export const reset = () => ({
-//   type: RESET
+//   type: 'RESET'
 // });
 
 // export const setCount = (count) => ({

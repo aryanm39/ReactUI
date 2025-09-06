@@ -1,31 +1,21 @@
-import { useDispatch, useSelector } from 'react-redux';
-import './App.css';
-import { decrement, increment, reset } from './features/counter/counterSlice';
+import React from "react";
+import { useSelector,useDispatch } from 'react-redux';
+import { Increment,Decrement } from "./redux/counterActions.jsx";
+import './App.css'
 
-function App() {
-  const count = useSelector((state) => state.counter.value);
+function App () 
+{
+  const count = useSelector((state) => state.counter);
   const dispatch = useDispatch();
 
-  function handleIncrementClick() {
-    dispatch(increment());
-  }
-
-  function handleDecrementClick() {
-    dispatch(decrement());
-  }
-
-  function handleResetClick() {
-    dispatch(reset());
-  }
-
-  return (
-    <div className='container'>
-      <button onClick={handleIncrementClick}> + </button>
-      <p>Count: {count}</p>
-      <button onClick={handleDecrementClick}> - </button>
-      <button onClick={handleResetClick}> Reset </button>
+  return(
+    <div>
+      <h1> React Redux </h1>
+      <h2>Current Count: {count} </h2>
+      <button onClick={()=>dispatch(Increment())}>Increment</button>
+      <button onClick={()=>dispatch(Decrement())}>Decrement</button>
+      <p>Counter Example (Increment & decrement) by dispatching action from reducer</p>
     </div>
   );
 }
-
 export default App;
